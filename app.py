@@ -55,7 +55,7 @@ if page == "Team Registration":
                 st.session_state["team_name"] = team_name
                 st.session_state["start_time"] = start_time
                 st.success("Team registered successfully! Proceed to the next step.")
-                st.markdown("[📂 Open First Drive Link](https://google.com)", unsafe_allow_html=True)  # First Drive link
+                st.markdown("[📂 Open First Drive Link](https://drive.google.com/drive/folders/1y8vhT4lKziFYdlaE8x9_SbNlE6Z4mAcF?usp=sharing)", unsafe_allow_html=True)  # First Drive link
     else:
         st.success(f"Welcome back, {st.session_state['team_name']}! Proceed using the sidebar.")
 
@@ -63,8 +63,8 @@ if page == "Team Registration":
 elif page == "Room 255 & Code":
     st.title("Go to Room 255")
     st.write("After exploring the clue, go to Room 255.")
-    st.markdown("[🔗 Clue Site 1](https://example.com/clue1)")
-    st.markdown("[🔗 Clue Site 2](https://example.com/clue2)")
+    st.markdown("[🔗 Clue Site 1](https://ptc-sxlt-aksran31s-projects.vercel.app/)")
+    st.markdown("[🔗 Clue Site 2](https://ptc-aksran31s-projects.vercel.app/)")
 
     st.subheader("Enter the Code")
     final_code = "876432"
@@ -82,12 +82,12 @@ elif page == "Room 325":
     if not st.session_state.get("entered_code"):
         st.warning("You must complete the previous stage first.")
     else:
-        correct_answer = "lightbulb"
+        correct_answer = "1a6yrA-1y5Z52AxABB2LfwYIwOm-7vwQV"
         answer = st.text_input("Enter the password:")
         if st.button("Submit"):
             if answer.lower() == correct_answer:
                 st.success("Correct! Open the next clue.")
-                st.markdown("[📂 Open Second Drive Link](https://google.com)", unsafe_allow_html=True)  # Second Drive link
+                st.markdown("[📂 Open Second Drive Link](https://drive.google.com/drive/folders/1a6yrA-1y5Z52AxABB2LfwYIwOm-7vwQV)", unsafe_allow_html=True)  # Second Drive link
                 st.session_state["solved_clue"] = True
             else:
                 st.error("Incorrect, try again!")
