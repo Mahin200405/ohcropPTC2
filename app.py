@@ -85,7 +85,7 @@ elif page == "Room 325":
         correct_answer = "1a6yrA-1y5Z52AxABB2LfwYIwOm-7vwQV"
         answer = st.text_input("Enter the password:")
         if st.button("Submit"):
-            if answer.lower() == correct_answer:
+            if answer == correct_answer:
                 st.success("Correct! Open the next clue.")
                 st.markdown("[📂 Open Second Drive Link](https://drive.google.com/drive/folders/1a6yrA-1y5Z52AxABB2LfwYIwOm-7vwQV)", unsafe_allow_html=True)  # Second Drive link
                 st.session_state["solved_clue"] = True
