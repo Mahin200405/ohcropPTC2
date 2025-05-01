@@ -24,7 +24,7 @@ def sync_with_gsheets(df):
 # App page selection
 st.set_page_config(page_title="Pin The Culprit")
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Team Registration", "Room 255 & Code", "Room 325", "Final Submission"])
+page = st.sidebar.radio("Go to", ["Team Registration", "Room 212 & Code", "Room 313", "Final Submission"])
 
 # Page 1: Registration
 if page == "Team Registration":
@@ -60,9 +60,9 @@ if page == "Team Registration":
         st.success(f"Welcome back, {st.session_state['team_name']}! Proceed using the sidebar.")
 
 # Page 2: Room 255 & Code Entry
-elif page == "Room 255 & Code":
-    st.title("Go to Room 255")
-    st.write("After exploring the clue, go to Room 255.")
+elif page == "Room 212 & Code":
+    st.title("Go to Room 212")
+    st.write("After exploring the clue, go to Room 212.")
     st.markdown("[🔗 Clue Site 1](https://ptc-sxlt-aksran31s-projects.vercel.app/)")
     st.markdown("[🔗 Clue Site 2](https://ptc-aksran31s-projects.vercel.app/)")
 
@@ -71,14 +71,14 @@ elif page == "Room 255 & Code":
     code = st.text_input("Enter the code:")
     if st.button("Check Code"):
         if code == final_code:
-            st.success("Correct! Now go to Room 325 for the next puzzle.")
+            st.success("Correct! Now go to Room 313 for the next puzzle.")
             st.session_state["entered_code"] = True
         else:
             st.error("Wrong code, try again.")
 
 # Page 3: Room 325 - Password Check
-elif page == "Room 325":
-    st.title("Room 325 - Password Puzzle")
+elif page == "Room 313":
+    st.title("Room 313 - Password Puzzle")
     if not st.session_state.get("entered_code"):
         st.warning("You must complete the previous stage first.")
     else:
