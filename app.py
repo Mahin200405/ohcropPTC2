@@ -63,8 +63,8 @@ if page == "Team Registration":
 elif page == "Room 212 & Code":
     st.title("Go to Room 212")
     st.write("After exploring the clue, go to Room 212.")
-    st.markdown("[🔗 Clue Site 1](https://ptc-sxlt-aksran31s-projects.vercel.app/)")
-    st.markdown("[🔗 Clue Site 2](https://ptc-aksran31s-projects.vercel.app/)")
+    st.markdown("[🔗 Fake Website](https://ptc-sxlt-aksran31s-projects.vercel.app/)")
+    st.markdown("[🔗 Real Website](https://ptc-aksran31s-projects.vercel.app/)")
 
     st.subheader("Enter the Code")
     final_code = "876432"
